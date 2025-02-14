@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+ 
+kind: Certificate
+metadata:
+  name: ukasz-com-tls
+spec:
+  secretName: ukasz-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: kubernetes-tutorial.ukasz.com
+  dnsNames:
+    - kubernetes-tutorial.ukasz.com
+
